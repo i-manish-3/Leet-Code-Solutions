@@ -1,0 +1,20 @@
+class Solution {
+public:
+     vector<int> sortArrayByParity(vector<int>& A) {
+     vector<int> odd;
+     vector<int> even;
+     for (auto& n : A) 
+     {
+        if (n % 2 == 1) 
+        {
+            odd.push_back(n);
+        } 
+         else 
+        {
+            even.push_back(n);
+        }
+      }
+            even.insert(even.end(), odd.begin(), odd.end());
+            return even;
+     }
+};
